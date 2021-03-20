@@ -101,7 +101,7 @@ def plot_queries(query_dir, output_dir, file_name='plot.tiff', id_col='Year',
     
     fig.savefig(output_dir/file_name, 
                 format='png', 
-                dpi=300, 
+                dpi=100, 
                 bbox_inches="tight")
     
     return new_merged
@@ -125,6 +125,6 @@ final_table = plot_queries(query_dir=query_dir,
                            output_dir=output_dir, 
                            file_name='plot.png', 
                            id_col='Year',
-                           legend_pos='below',
+                           legend_pos='right',
                            drop_values=['2021'])
 
