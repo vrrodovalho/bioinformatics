@@ -100,7 +100,7 @@ def plot_queries(query_dir, output_dir, file_name='plot.tiff', id_col='Year',
     plt.show()
     
     fig.savefig(output_dir/file_name, 
-                format='tiff', 
+                format='png', 
                 dpi=300, 
                 bbox_inches="tight")
     
@@ -123,7 +123,7 @@ query_dir = input_dir / 'queries'
 # CALL PLOT FUNCTION
 final_table = plot_queries(query_dir=query_dir, 
                            output_dir=output_dir, 
-                           file_name='plot.tiff', 
+                           file_name='plot.png', 
                            id_col='Year',
                            legend_pos='below',
                            drop_values=['2021'])
