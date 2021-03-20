@@ -56,8 +56,8 @@ def plot_queries(query_dir, output_dir, file_name='plot.tiff', id_col='Year',
         with open(os.path.join(os.getcwd(), filename), 'r') as f:
             df = pd.read_csv(f, header=1)
         with open(os.path.join(os.getcwd(), filename), 'r') as f:
-            header = f.readline().strip().split('Search query: ')[1]
-        df = df.rename(columns={'Count': header})
+            query_id = f.readline().strip().split('Search query: ')[1]
+        df = df.rename(columns={'Count': query_id})
         dfs.append(df)
     
     # merge all dataframes based on id_col
@@ -95,7 +95,6 @@ def plot_queries(query_dir, output_dir, file_name='plot.tiff', id_col='Year',
               borderaxespad=0.)
     ax.set_ylabel('Publications count')
     ax.set_xlabel('Year')
-    
     # plt.subplots_adjust(left=0.1, right = 0.7)
     plt.show()
     
