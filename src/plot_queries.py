@@ -126,5 +126,5 @@ final_table = plot_queries(query_dir=query_dir,
                            file_name='plot.tiff', 
                            id_col='Year',
                            legend_pos='below',
-                           drop_values=[])
+                           drop_values=['2021'])
 
