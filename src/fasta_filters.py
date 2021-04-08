@@ -4,7 +4,7 @@ Created on Wed Jun 12 13:48:34 2019
 
 @author: vrrodovalho
 
-This script XXXXXXXXXXXXX
+This script performs fasta parsing, filtering and exporting.
 
 """
 
