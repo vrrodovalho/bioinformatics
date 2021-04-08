@@ -2,9 +2,9 @@
 """
 Created on Thu Apr  8 18:13:55 2021
 
-@author: Cliente
+@author: vrrodovalho
 
-This script is to convert KEGG and Uniprot ids.
+This script contains functions to convert KEGG and Uniprot ids.
 
 """
 
@@ -74,7 +74,6 @@ sys.path.insert(0, root_dir)
 
 # Redefine input and output directories
 input_dir = input_dir / 'fasta_filters'
-# output_dir = output_dir / 'fasta_filters'
 
 # Get human uniprot IDs that are in kegg
 kegg2uniprot = retrieve_uniprot_2_kegg(format1='hsa', format2='uniprot', 

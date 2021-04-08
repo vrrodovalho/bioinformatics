@@ -80,8 +80,9 @@ def list_parser(list_file, forbidden_lines=['',' '], verbose=True):
 
     Returns
     -------
-    TYPE
-        DESCRIPTION.
+    LIST
+        The list(s) parsed from the file, with duplicated elements
+        identified, if that is the case.
 
     '''
     
