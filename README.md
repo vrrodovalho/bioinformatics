@@ -1,5 +1,5 @@
-# miscellaneous
-This repository contains several scripts that could be useful for someone else.
+# Bioinformatics
+This repository contains several bioinformatics scripts that could be useful for someone else.
 
 The src directory contains all code.
 
