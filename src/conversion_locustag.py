@@ -74,4 +74,33 @@ ids = [line.strip().replace('#!genome-build-accession ','').replace('#!genome-bu
 ids = list(set(ids))
 print(ids)
 
-
+ids2 = [
+        'ASM46648v1',
+        'NCBI_Assembly:GCF_000296465.1',
+        'NCBI_Assembly:GCF_900537995.1',
+        'NCBI_Assembly:GCF_001314995.1',
+        'Barn_inte_YIT_11860_V1',
+        'ASM1050923v1',
+        'NCBI_Assembly:GCF_010509575.1',
+        'NCBI_Assembly:GCF_010509235.1',
+        'ASM674234v1',
+        'NCBI_Assembly:GCF_006742345.1',
+        'NCBI_Assembly:GCF_000156375.1',
+        'NCBI_Assembly:GCF_000020605.1',
+        'Roseburia intestinalis strain L1-82',
+        'ASM1050957v1',
+        'ASM1776v1',
+        'NCBI_Assembly:GCF_000466485.1',
+        'NCBI_Assembly:GCF_000011065.1',
+        'ASM1106v1',
+        'NCBI_Assembly:GCF_002222615.2',
+        'NCBI_Assembly:GCF_000173815.1',
+        'ASM17381v1',
+        'NCBI_Assembly:GCF_000169035.1',
+        'ASM131499v1',
+        'NCBI_Assembly:GCF_000017765.1',
+        'ASM222261v2',
+        'ASM2060v1',
+        'ASM16903v1',
+        'ASM15637v1'
+        ]
