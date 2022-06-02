@@ -297,14 +297,13 @@ sys.path.insert(0, root_dir)
 # Redefine input and output directories
 input_dir = input_dir / 'fasta_filters'
 
+### HUMAN PROTEINS
 # File paths
 fasta_file = input_dir / 'uniprot-reviewed yes+AND+proteome up000005640.fasta'
 list_file = input_dir / 'human_proteines_list.txt'
-
 # Read files
 fasta = fasta_parser(fasta_file, forbidden_lines=['',' '], verbose=True)
 ids_list = list_parser(list_file, forbidden_lines=['',' '], verbose=True)
-
 # Filter fasta
 filtered_fastas = filter_sequences(fasta, 
                                   min_seq_len=35,
@@ -315,11 +314,32 @@ filtered_fastas = filter_sequences(fasta,
                                              'id_list_in':True,
                                              'id_list_out':False},
                                   explain=True)
-
 filtered_in  = filtered_fastas['in']
 filtered_out = filtered_fastas['out']
-
 # Export 
 fasta_dict2file(filtered_in, output_dir=output_dir, 
                 output_file='filtered_human.fasta')
+
+
+##### BACTERIA PROTEINS
+fasta_file2 = input_dir / 'XXXXXX'
+list_file2 = input_dir / 'bacteria_proteins_list.txt'
+# Read files
+fasta2 = fasta_parser(fasta_file2, forbidden_lines=['',' '], verbose=True)
+ids_list2 = list_parser(list_file2, forbidden_lines=['',' '], verbose=True)
+# Filter fasta
+filtered_fastas = filter_sequences(fasta2, 
+                                  min_seq_len=1,
+                                  forbidden=['B','J','O','U','X','Z'],
+                                  id_filters=ids_list2,
+                                  filter_by={'seq_size':True,
+                                             'seq_char':True,
+                                             'id_list_in':True,
+                                             'id_list_out':False},
+                                  explain=True)
+filtered_in  = filtered_fastas['in']
+filtered_out = filtered_fastas['out']
+# Export 
+fasta_dict2file(filtered_in, output_dir=output_dir, 
+                output_file='filtered_bacteria.fasta')
 
